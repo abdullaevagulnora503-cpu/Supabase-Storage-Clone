@@ -1,0 +1,171 @@
+/* 1. Global Sozlamalar */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap');
+
+:root {
+  --sb-bg: #1c1c1c;
+  --sb-card-bg: #222222;
+  --sb-green: #24b47e;
+  --sb-green-hover: #1e9668;
+  --sb-border: rgba(255, 255, 255, 0.05);
+  --sb-text-main: #ffffff;
+  --sb-text-muted: #a1a1aa;
+  --sb-text-dim: #71717a;
+}
+
+body {
+  background-color: var(--sb-bg);
+  color: var(--sb-text-main);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Matn Stillari */
+h2 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; }
+h4 { font-size: 1rem; font-weight: 600; color: var(--sb-text-main); }
+p { line-height: 1.6; }
+
+/* 3. Komponentlar */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.btn-primary {
+  background-color: var(--sb-green);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--sb-green-hover);
+}
+
+.btn-secondary {
+  background: #2e2e2e;
+  color: var(--sb-text-muted);
+  border: 1px solid var(--sb-border);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #3a3a3a;
+  color: white;
+}
+
+/* 4. Kod va Terminal Oynasi */
+.code-window {
+  background: #18181b;
+  border: 1px solid var(--sb-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.code-header {
+  background: #27272a;
+  padding: 0 16px;
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid var(--sb-border);
+}
+
+.code-tab {
+  padding: 12px 0;
+  font-size: 0.875rem;
+  color: var(--sb-text-dim);
+  cursor: pointer;
+  position: relative;
+}
+
+.code-tab.active {
+  color: var(--sb-text-main);
+}
+
+.code-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--sb-green);
+}
+
+pre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  padding: 24px;
+  margin: 0;
+  overflow-x: auto;
+  line-height: 1.7;
+}
+
+.syntax-keyword { color: #c678dd; }
+.syntax-string { color: #98c379; }
+.syntax-number { color: #d19a66; }
+.syntax-comment { color: #5c6370; font-style: italic; }
+
+/* 5. Footer Sozlamalari */
+footer {
+  border-top: 1px solid var(--sb-border);
+  padding: 80px 0 40px;
+}
+
+.footer-link {
+  color: var(--sb-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.footer-heading {
+  color: var(--sb-text-dim);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+/* 6. Dark/Light Switcher */
+.theme-toggle {
+  width: 36px;
+  height: 18px;
+  background: #2e2e2e;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+}
